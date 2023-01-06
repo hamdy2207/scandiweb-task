@@ -93,6 +93,13 @@ export default new Vuex.Store({
           if(res.data.errors){
               state.errors = res.data.errors;
           }else{
+            state.name = '',
+            state.sku = '',
+            state.price = '',
+            state.type = '0',
+            state.errors = [],
+            state.attributes = [],
+            state.type_value = 'Type',
               this.commit('back');
           }
       })
